@@ -31,11 +31,11 @@ void drawTile(int x, int y, int size, int type) {
   switch (type) {
     
     case 0: // Horizonal line
-      line(x, y, x + size * 2, y);
+      line(x, y, x + size, y);
       break;
     
     case 1: // Vertical line
-      line(x, y, x, y + size * 2);
+      line(x, y, x, y + size);
       break;
     
     case 2: // Cross
@@ -53,7 +53,7 @@ void drawTile(int x, int y, int size, int type) {
     
     case 5: // 3/4 Circle variation 1
       int radius = size / 2;
-      arc(x, y, size * 2, size * 2, 0, PI + HALF_PI);
+      arc(x + radius, y + radius, size * 2, size * 2, 0, PI + HALF_PI);
       break;
     
     case 6: // 3/4 Circle variation 2
